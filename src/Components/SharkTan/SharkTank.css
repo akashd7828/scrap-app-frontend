@@ -1,0 +1,104 @@
+/* Container for the Shark Tank images */
+.shark_tank_india_div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+.image-wrapper {
+  flex: 1 1 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sharkss {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.sharkss:hover {
+  transform: scale(1.05);
+}
+
+/* Award Section */
+.award-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 40px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  margin: 40px auto;
+  gap: 20px;
+}
+
+.award-text-container {
+  flex: 1 1 45%;
+}
+
+.award-img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.award-text {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+/* Media Queries for responsiveness */
+@media screen and (max-width: 768px) {
+  .shark_tank_india_div {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .image-wrapper {
+    flex: 1 1 100%;
+  }
+
+  .award-section {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .award-text-container,
+  .image-container {
+    flex: 1 1 100%;
+    text-align: center;
+  }
+
+  .h2 {
+    font-size: 1.5rem;
+  }
+
+  .award-text {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .sharkss {
+    max-width: 250px;
+  }
+
+  .award-text {
+    font-size: 0.9rem;
+  }
+}

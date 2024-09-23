@@ -1,0 +1,70 @@
+{
+  "users": [
+    {
+      "id": "c8c8",
+      "firstName": "Ankesh",
+      "lastName": "Sharma",
+      "username": "ankesh",
+      "mobile": "9888887387",
+      "email": "ankesh9053@gmail.com",
+      "password": "Brahman_45"
+    },
+    {
+      "id": "5dcd",
+      "firstName": "Ankesh",
+      "lastName": "Sharma",
+      "username": "ankesh",
+      "mobile": "9888887387",
+      "email": "ankesh9053@gmail.com",
+      "password": "Brahman_45"
+    },
+    {
+      "id": "d64a",
+      "firstName": "Ankesh",
+      "lastName": "Sharma",
+      "username": "ankesh",
+      "mobile": "8788733333",
+      "email": "ankesh9053@gmail.com",
+      "password": "jhhehe"
+    },
+    {
+      "id": "d7d5",
+      "firstName": "Ankesh",
+      "lastName": "Sharma",
+      "username": "ankesh",
+      "mobile": "8788733333",
+      "email": "ankesh9053@gmail.com",
+      "password": "jhhehe",
+      "": ""
+    },
+    {
+      "id": "689f",
+      "firstName": "Ankesh",
+      "lastName": "sharma",
+      "username": "ankesh",
+      "mobile": "9999999999",
+      "email": "ankesh@relinns.com",
+      "password": "Brahhhgh"
+    }
+  ],
+  "form1Data": [
+    {
+      "id": "b9b9",
+      "scrapWeight": {
+        "value": "10kg",
+        "label": "10 kg"
+      },
+      "scrapType": [
+        {
+          "value": "glass",
+          "label": "Glass"
+        }
+      ]
+    }
+  ],
+  "form2Data": [
+    {
+      "id": "810f"
+    }
+  ]
+}

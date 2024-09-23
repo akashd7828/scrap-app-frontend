@@ -1,0 +1,179 @@
+/* General Layout */
+.about-us-container {
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  padding: 40px 0;
+}
+
+.about-us-section {
+  width: 90%;
+  max-width: 1200px;
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Titles */
+.about-us-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Enhanced Welcome Line */
+.about-us-welcome {
+  font-size: 1.6rem;
+  color: #3498db;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.enhanced-welcome .highlight {
+  font-weight: bold;
+  color: #2c3e50;
+  font-size: 1.8rem;
+}
+
+/* Description Text - Left aligned */
+.about-us-description,
+.about-us-main,
+.about-us-contact {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+/* Subtitles */
+.about-us-subtitle {
+  font-size: 1.8rem;
+  color: #2c3e50;
+  margin: 20px 0;
+  text-align: left;
+}
+
+/* List */
+.about-us-list {
+  list-style: none;
+  padding: 0;
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.about-us-list li {
+  margin-bottom: 15px;
+  transition: transform 0.2s ease-in;
+}
+
+.about-us-list li:hover {
+  transform: translateX(10px);
+}
+
+.about-us-list li::before {
+  content: "✓";
+  margin-right: 10px;
+  color: #3498db;
+  font-weight: bold;
+}
+
+/* Mission, Vision, and Goals */
+.about-us-mission-goals {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.mission-vision-goal {
+  flex: 1;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+}
+
+.vision-title,
+.mission-title,
+.goal-title {
+  font-size: 1.6rem;
+  color: #2c3e50;
+  margin-bottom: 10px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.vision-description,
+.mission-description,
+.goal-description {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  text-align: left;
+}
+
+/* Social Media Links */
+.social-media-links {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.social-icon {
+  font-size: 2rem;
+  margin: 0 10px;
+  color: #2c3e50;
+  transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #3498db;
+}
+
+/* Instagram specific icon style */
+.instagram-icon {
+  color: #e4405f;
+}
+
+.instagram-icon:hover {
+  color: #e1306c;
+}
+
+/* LinkedIn specific icon style */
+.linkedin-icon {
+  color: #0077b5;
+}
+
+.linkedin-icon:hover {
+  color: #005582;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-us-mission-goals {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .about-us-title {
+    font-size: 2.4rem;
+  }
+
+  .about-us-welcome {
+    font-size: 1.4rem;
+  }
+
+  .about-us-subtitle {
+    font-size: 1.6rem;
+  }
+
+  .about-us-list li {
+    font-size: 1rem;
+  }
+}
