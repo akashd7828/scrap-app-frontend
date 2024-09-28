@@ -9,6 +9,7 @@ import ForgotPassword from "../Login/ForgotPassword";
 import AboutUs from "../ExtraPages/AboutUs";
 import ScrapRates from "../ExtraPages/ScrapRates";
 import PrivateRoute from "./PivateRoutes";
+import RVM from "../ExtraPages/Rvm";
 
 const MainRoutes = () => {
   return (
@@ -42,6 +43,7 @@ const MainRoutes = () => {
       />
       <Route path="/forgot-password" element={<ForgotPassword />} />
       <Route path="/about-us" element={<AboutUs />} />
+      <Route path="/rvm" element={<RVM />} />
       <Route path="/scrap-rates" element={<ScrapRates />} />
       <Route path="*" element={<Homepage />} />
       <Route path="" element={<Homepage />} />

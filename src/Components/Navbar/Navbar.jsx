@@ -68,6 +68,9 @@ const Navbar = () => {
             <Link to="/">
               <li className="nav-item">Home</li>
             </Link>
+            <Link to="/rvm">
+              <li className="nav-item">RVM</li>
+            </Link>
             <Link to={"/about-us"}>
               <li className="nav-item">Why Us?</li>
             </Link>

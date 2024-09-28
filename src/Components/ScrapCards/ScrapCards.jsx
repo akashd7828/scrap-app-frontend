@@ -22,7 +22,7 @@ import {
   MdPhone,
   MdInfoOutline,
 } from "react-icons/md";
-import { refreshAccessToken } from "../../Assets/refreshToken";
+import { RefreshAccessToken } from "../../Assets/refreshToken";
 import { toast } from "react-toastify";
 
 const ScrapCards = () => {
@@ -45,7 +45,7 @@ const ScrapCards = () => {
         setOrders(response.data);
       } catch (err) {
         if (err?.status === 403) {
-          await refreshAccessToken();
+          await RefreshAccessToken();
         } else {
           setError(err.message);
         }
@@ -71,7 +71,7 @@ const ScrapCards = () => {
     } catch (err) {
       if (err?.status === 403) {
         toast.error("Your session has expired please try action again");
-        await refreshAccessToken();
+        await RefreshAccessToken();
       } else {
         setError(err.message);
       }

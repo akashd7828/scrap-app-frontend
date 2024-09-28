@@ -14,20 +14,26 @@
 
 .images-wrapper {
   display: flex;
-  justify-content: center; /* Center the grid */
+  justify-content: center;
+  align-items: center; /* Align both horizontally and vertically */
+  width: 100%;
 }
 
 .images-container {
-  width: 90%;
+  width: 80%; /* Adjust as per your container size */
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 20px; /* Space between images */
-  align-items: center; /* Align images vertically */
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(200px, 1fr)
+  ); /* Increase min image size */
+  gap: 40px; /* Space between images */
+  justify-items: center; /* Center images horizontally */
+  align-items: center; /* Center images vertically */
 }
 
 .images-container img {
   width: 100%;
-  max-width: 150px; /* Maintain aspect ratio while ensuring consistent size */
+  max-width: 250px; /* Increase the size of the logos */
   object-fit: contain; /* Ensure images maintain their proportions */
 }
 
@@ -36,8 +42,11 @@
 /* Tablets and small screens (768px and below) */
 @media (max-width: 768px) {
   .images-container {
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    gap: 15px;
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(150px, 1fr)
+    ); /* Adjust size for tablets */
+    gap: 30px;
   }
 
   .heading p {
@@ -49,7 +58,7 @@
 @media (max-width: 480px) {
   .images-container {
     grid-template-columns: repeat(2, 1fr); /* Display 2 images per row */
-    gap: 10px;
+    gap: 15px;
   }
 
   .heading p {
@@ -57,6 +66,6 @@
   }
 
   .images-container img {
-    max-width: 100px;
+    max-width: 120px; /* Smaller size for mobile */
   }
 }

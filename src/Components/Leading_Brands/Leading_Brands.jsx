@@ -1,5 +1,8 @@
 import React from "react";
 import "./Leading_Brands.css";
+import ISB from "../../Assets/ISB.jpeg";
+import AIC from "../../Assets/AIC.jpeg";
+import thub from "../../Assets/thub.png";
 
 const Leading_Brands = () => {
   return (
@@ -9,33 +12,19 @@ const Leading_Brands = () => {
       </div>
       <div className="images-wrapper">
         <div className="images-container">
+          {/* ISB AIC Logo */}
           <img
-            src="https://ikp.edgekit.net/h1rxzpffx/scrapuncle/Godrej_YFed2weyc.png"
-            alt="Godrej"
+            src={ISB} // Replace with actual logo URL
+            alt="ISB AIC"
           />
           <img
-            src="https://ikp.edgekit.net/h1rxzpffx/scrapuncle/IIITD_W2Vm8BwJ-.png"
-            alt="IIIT Delhi"
+            src={AIC} // Replace with actual logo URL
+            alt="ISB AIC"
           />
+          {/* T-Hub Logo */}
           <img
-            src="https://ikp.edgekit.net/h1rxzpffx/scrapuncle/Screenshot_2021-12-10_at_06.00.24_5atFfjtN1s1.png"
-            alt="Brand 3"
-          />
-          <img
-            src="https://ikp.edgekit.net/h1rxzpffx/scrapuncle/Li_and_Fung__oRk7-0rOeg.png"
-            alt="Li and Fung"
-          />
-          <img
-            src="https://ikp.edgekit.net/h1rxzpffx/scrapuncle/Tata_Steel_t8NNDeFISKC.png"
-            alt="Tata Steel"
-          />
-          <img
-            src="https://ikp.edgekit.net/h1rxzpffx/scrapuncle/Thermax_SNEUT74wiO.png"
-            alt="Thermax"
-          />
-          <img
-            src="https://ikp.edgekit.net/h1rxzpffx/scrapuncle/UrbanCompany_xDr91X1UceL.png"
-            alt="Urban Company"
+            src={thub} // Replace with actual logo URL
+            alt="T-Hub"
           />
         </div>
       </div>

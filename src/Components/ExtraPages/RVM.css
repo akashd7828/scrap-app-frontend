@@ -1,0 +1,124 @@
+/* Main Container */
+.rvm-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  background-color: #f9f9f9;
+  margin: 2rem auto;
+  max-width: 1200px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading */
+.rvm-container h1 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.rvm-container p {
+  font-size: 1.1rem;
+  color: #7f8c8d;
+  text-align: center;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+/* Features Section */
+.rvm-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+/* Individual Feature */
+.rvm-feature-item {
+  display: flex;
+  align-items: flex-start;
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.rvm-feature-item:hover {
+  transform: translateY(-5px);
+}
+
+/* Icon Styling */
+.icon {
+  font-size: 4rem; /* Large icon size */
+  color: #27ae60;
+  margin-right: 1rem;
+}
+
+/* Text in Feature Item */
+.feature-text h2 {
+  font-size: 1.5rem;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.feature-text p {
+  font-size: 1rem;
+  color: #7f8c8d;
+  line-height: 1.5;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .rvm-container {
+    padding: 1.5rem;
+  }
+
+  .rvm-container h1 {
+    font-size: 2rem;
+  }
+
+  .rvm-container p {
+    font-size: 1rem;
+    text-align: left;
+  }
+
+  .rvm-features {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+
+  .icon {
+    font-size: 3rem; /* Adjusted for smaller screens */
+  }
+
+  .feature-text h2 {
+    font-size: 1.3rem;
+  }
+
+  .feature-text p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .rvm-container {
+    padding: 1rem;
+  }
+
+  .rvm-container h1 {
+    font-size: 1.5rem;
+  }
+
+  .rvm-container p {
+    font-size: 0.85rem;
+  }
+
+  .rvm-features {
+    grid-template-columns: 1fr; /* Stacks the items vertically */
+  }
+
+  .icon {
+    font-size: 3rem; /* Adjusted for mobile */
+  }
+}
