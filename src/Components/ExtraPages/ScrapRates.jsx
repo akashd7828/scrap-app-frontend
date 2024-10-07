@@ -98,7 +98,7 @@ const ScrapRates = () => {
       <div className="note">
         <p>
           <strong>Note:</strong> Scrap Rates may be different for bulk Scrap.
-          Call us at <strong>7828730958</strong> to get a quote for bulk Scrap.
+          Call us at <strong>7702115695</strong> to get a quote for bulk Scrap.
           We don’t deal in toughened glass, wooden items, fabrics. Minimum Scrap
           Pickup Value Should be <strong>150Rs</strong> Required.
         </p>

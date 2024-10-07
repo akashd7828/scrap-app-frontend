@@ -38,7 +38,12 @@
 }
 
 /* Media Queries for Responsiveness */
-
+.heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
 /* Tablets and small screens (768px and below) */
 @media (max-width: 768px) {
   .images-container {

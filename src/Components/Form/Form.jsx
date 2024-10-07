@@ -152,6 +152,12 @@ const Form = () => {
         <div className="sub-title">
           <span>Paper - Plastics - Metals - Appliances</span>
         </div>
+        <div className="sub-title">
+          <span>
+            You can also download the{" "}
+            <b style={{ color: "green", cursor: "pointer" }}>ScrapUncle App</b>
+          </span>
+        </div>
         <img src={chotu} alt="Scrap Uncle Banner" className="banner-img" />
       </div>
 
@@ -220,7 +226,7 @@ const Form = () => {
           )}
           <p className="support-text">
             Facing Problems? Call us at{" "}
-            <a href="tel:+917828730958">+917828730958</a>
+            <a href="tel:+917702115695">+917702115695</a>
           </p>
         </div>
       </div>

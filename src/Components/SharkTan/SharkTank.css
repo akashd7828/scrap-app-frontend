@@ -1,104 +1,138 @@
-/* Container for the Shark Tank images */
-.shark_tank_india_div {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 20px;
-  padding: 20px;
+.blogs-container {
+  padding: 2rem;
+  background-color: #f5f5f5;
 }
 
-.image-wrapper {
-  flex: 1 1 30%;
+.blogs-title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.blogs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  width: 100%;
+}
+
+.blogs-card {
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #fff;
+}
+
+.blogs-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.blogs-header {
+  width: 100%;
+  height: 150px; /* Set a smaller fixed height for image */
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.sharkss {
+.blog-image {
   width: 100%;
-  max-width: 300px;
-  height: auto;
-  border-radius: 10px;
-  object-fit: cover;
-  transition: transform 0.3s ease-in-out;
-}
-
-.sharkss:hover {
-  transform: scale(1.05);
-}
-
-/* Award Section */
-.award-section {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  padding: 40px;
-  background-color: #f8f9fa;
+  height: 100%; /* Maintain aspect ratio */
+  object-fit: contain; /* Cover the card, but now with better container dimensions */
+  max-height: 250px; /* Ensure it doesn't grow too tall */
   border-radius: 8px;
-  margin: 40px auto;
-  gap: 20px;
 }
 
-.award-text-container {
-  flex: 1 1 45%;
+.blogs-body {
+  padding: 1.5rem;
 }
 
-.award-img {
-  max-width: 100%;
-  border-radius: 10px;
-}
-
-.h2 {
-  font-size: 2rem;
-  font-weight: bold;
+.blogs-body h3 {
+  font-size: 1.5rem;
   color: #333;
-  margin-bottom: 10px;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
 }
 
-.award-text {
-  font-size: 1.2rem;
+.blogs-body p {
+  font-size: 1rem;
+  line-height: 1.5;
   color: #555;
+  margin-bottom: 1.25rem;
 }
 
-/* Media Queries for responsiveness */
-@media screen and (max-width: 768px) {
-  .shark_tank_india_div {
-    flex-direction: column;
-    align-items: center;
-  }
+.read-more {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+}
 
-  .image-wrapper {
-    flex: 1 1 100%;
-  }
+.read-more:hover {
+  text-decoration: underline;
+}
 
-  .award-section {
-    flex-direction: column;
-    padding: 20px;
-  }
+.content {
+  text-align: justify; /* Better readability */
+  margin-bottom: 1rem;
+}
 
-  .award-text-container,
-  .image-container {
-    flex: 1 1 100%;
-    text-align: center;
-  }
+.blogs-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Always 4 columns */
+  gap: 2rem;
+  width: 100%;
+}
 
-  .h2 {
-    font-size: 1.5rem;
-  }
+.blogs-card {
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #fff;
+  width: 100%; /* Ensure card takes full width within its column */
+}
 
-  .award-text {
-    font-size: 1rem;
+@media (max-width: 1200px) {
+  .blogs-grid {
+    grid-template-columns: repeat(
+      3,
+      1fr
+    ); /* 3 cards per row on medium screens */
   }
 }
 
-@media screen and (max-width: 480px) {
-  .sharkss {
-    max-width: 250px;
+@media (max-width: 900px) {
+  .blogs-grid {
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /* 2 cards per row on smaller screens */
   }
+}
 
-  .award-text {
-    font-size: 0.9rem;
+@media (max-width: 600px) {
+  .blogs-grid {
+    grid-template-columns: 1fr; /* Single card per row on small screens */
   }
+}
+
+.read-more {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.read-more:hover {
+  text-decoration: underline;
+}
+
+.content {
+  text-align: justify;
+  margin-bottom: 1rem;
 }
