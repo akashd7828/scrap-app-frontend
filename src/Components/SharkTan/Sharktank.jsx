@@ -41,7 +41,7 @@ const AwardsSection = () => {
         `${process.env.REACT_APP_API_URL}/api/awards`
       );
 
-      setData(response?.data || blogData);
+      setData(response?.data?.length ? response?.data : blogData);
     };
 
     fetchBlogs();
