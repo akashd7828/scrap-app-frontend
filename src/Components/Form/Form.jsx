@@ -155,7 +155,7 @@ const Form = () => {
         <div className="sub-title">
           <span>
             You can also download the{" "}
-            <b style={{ color: "green", cursor: "pointer" }}>ScrapUncle App</b>
+            <b style={{ color: "green", cursor: "pointer" }}>ScrapPe App</b>
           </span>
         </div>
         <img src={chotu} alt="Scrap Uncle Banner" className="banner-img" />
