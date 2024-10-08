@@ -51,15 +51,16 @@ const AwardsSection = () => {
       <h1 className="blogs-title">Our Awards</h1>
 
       <div className="blogs-grid">
-        {data?.map((ele, index) => {
-          return (
-            <BlogCard
-              image={ele.imageUrl}
-              title={ele.title}
-              content={ele.description}
-            />
-          );
-        })}
+        {data?.length &&
+          data?.map((ele, index) => {
+            return (
+              <BlogCard
+                image={ele.imageUrl}
+                title={ele.title}
+                content={ele.description}
+              />
+            );
+          })}
       </div>
     </div>
   );

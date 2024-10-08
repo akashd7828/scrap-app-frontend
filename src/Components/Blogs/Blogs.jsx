@@ -41,7 +41,7 @@ const Blogs = () => {
         `${process.env.REACT_APP_API_URL}/api/blog`
       );
 
-      setData(response?.data || blogData);
+      setData(response?.data?.length ? response?.data : blogData);
     };
 
     fetchBlogs();
@@ -51,16 +51,17 @@ const Blogs = () => {
       <h1 className="blogs-title">Our Blogs</h1>
 
       <div className="blogs-grid">
-        {data?.map((ele, index) => {
-          return (
-            <BlogCard
-              image={ele.imageUrl}
-              title={ele.title}
-              content={ele.description}
-              link={ele.blogUrl}
-            />
-          );
-        })}
+        {data?.length &&
+          data?.map((ele, index) => {
+            return (
+              <BlogCard
+                image={ele.imageUrl}
+                title={ele.title}
+                content={ele.description}
+                link={ele.blogUrl}
+              />
+            );
+          })}
       </div>
     </div>
   );
