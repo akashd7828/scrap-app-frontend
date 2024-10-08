@@ -6,7 +6,7 @@ export const TestMonialCard = ({ avatar, name, content }) => {
     setShowFullContent((prevShowFullContent) => !prevShowFullContent);
   };
   const truncatedContent =
-    content.length > 100 ? content.slice(0, 100) + "..." : content;
+    content?.length > 100 ? content?.slice(0, 100) + "..." : content;
   return (
     <div className="testimonial-card">
       <div className="testimonial-header">

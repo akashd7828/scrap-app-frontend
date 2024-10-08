@@ -20,7 +20,7 @@ export const BlogCard = ({ image, content, title, blogUrl }) => {
   };
 
   const truncatedContent =
-    content.length > 100 ? content.slice(0, 100) + "..." : content;
+    content?.length > 100 ? content?.slice(0, 100) + "..." : content;
 
   return (
     <div className="blogs-card">
