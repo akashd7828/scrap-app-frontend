@@ -1,6 +1,6 @@
 import React from "react";
 import "./RVM.css";
-import rvm from "../../Assets/Reverse-vending-machine.png";
+import rvm from "../../Assets/rvm.jpeg";
 import {
   FaRecycle,
   FaMobileAlt,
@@ -29,20 +29,19 @@ const Rvm = () => {
         <div className="rvm-header-text">
           <h1>Reverse Vending Machine (RVM) in India</h1>
           <p>
-            One of the products which helps in effective disposal of plastics is
-            the Reverse Vending Machine (RVM). An RVM is a device which accepts
-            bar coded plastic bottles and returns digital cash or redeemable
-            coupons. We provide smart Reverse Vending Machines (RVM) that help
-            recycle plastic bottles. Not only do these machines help the
-            environment, but they also reward you for your recycling efforts.To
-            lead 5R policy meticulously and to encourage the recycling
-            profession scrappe came into existence and has created a milestone
-            of recycling more than 20,00,000 bottles.At scrappe we aspire to
-            help society to be clean and green with our environmental solution
-            devoted to realizing arational society with the help of our rich
-            experience and collective strengths of supplying Reverse Vending
-            Machines where one can swap recyclable materials such as plastic
-            bottles and metal cans.
+            One of the key innovations for efficient waste disposal is the
+            Reverse Vending Machine (RVM). These machines accept barcoded
+            plastic bottles, aluminum cans, and glass bottles, rewarding users
+            with digital cash or redeemable vouchers in return. At ScrapPe, we
+            provide advanced RVMs designed to streamline the recycling of these
+            materials, promoting both environmental sustainability and user
+            incentives. ScrapPe was founded to spearhead a comprehensive
+            recycling movement and has already achieved the milestone of
+            recycling over 2 million items. Our mission is to help create a
+            cleaner and greener society through innovative solutions, drawing
+            from our rich expertise. Our RVMs empower users to exchange
+            recyclable materials—plastic, aluminum, and glass—for rewards,
+            helping build a more sustainable future.
           </p>
         </div>
         <div className="rvm-header-image">
@@ -56,13 +55,16 @@ const Rvm = () => {
         <div className="how-it-works-content">
           <div className="how-it-works-text">
             <p>
-              The Reverse Vending Machine (RVM) is designed to help the
-              environment by recycling empty plastic bottles and cans in return
-              for exciting rewards. Consumers insert used containers into the
-              designated slot upon approaching the machine. The machine works
-              using sensors to identify and validate the material, ensuring it
-              meets recycling criteria. This may be done using AI technology or
-              simply by scanning the UPC code or barcode.
+              The Reverse Vending Machine (RVM) is an innovative solution aimed
+              at promoting environmental sustainability by recycling empty
+              plastic bottles, aluminum cans, and glass bottles, while offering
+              consumers attractive rewards in return. Users simply deposit their
+              used containers into the designated slot, and the machine uses
+              advanced sensors to identify and verify the material. This
+              validation process can be powered by AI technology or by scanning
+              the container's UPC code or barcode to ensure it qualifies for
+              recycling, making it an efficient and eco-friendly tool for waste
+              management.
             </p>
           </div>
           <div className="how-it-works-image">{/* Add an image here */}</div>

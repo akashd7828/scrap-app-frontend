@@ -3,7 +3,7 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 40px 20px;
-  font-family: Arial, sans-serif;
+  font-family: "Roboto", sans-serif; /* Use Roboto for body text */
   color: #333;
 }
 
@@ -16,10 +16,11 @@
   margin-bottom: 50px;
 }
 .rvm-header-text {
-  flex-basis: 90%;
+  flex-basis: 95%;
   text-align: left;
 }
 .rvm-header-text h1 {
+  font-family: "Poppins", sans-serif; /* Use Poppins for headings */
   font-size: 2.5em;
   color: #333;
 }
@@ -29,6 +30,7 @@
   color: #666;
 }
 
+/* Header Image */
 .rvm-header-image img {
   width: 100%;
   height: auto;
@@ -41,6 +43,7 @@
 }
 
 .how-it-works h2 {
+  font-family: "Poppins", sans-serif; /* Use Poppins for headings */
   font-size: 2em;
   color: #4caf50;
 }
@@ -85,6 +88,7 @@
 }
 
 .feature-item h3 {
+  font-family: "Poppins", sans-serif; /* Use Poppins for headings */
   font-size: 1.4em;
   margin-bottom: 10px;
 }
@@ -93,10 +97,13 @@
   font-size: 1.1em;
   color: #555;
 }
+
+/* Paragraph Style */
 p {
   text-align: left;
 }
 
+/* Locations Section */
 .rvm-locations {
   margin-top: 40px;
   text-align: center;
@@ -104,6 +111,7 @@ p {
 }
 
 .rvm-locations h2 {
+  font-family: "Poppins", sans-serif; /* Use Poppins for headings */
   font-size: 1.8em;
   color: #4caf50;
   margin-bottom: 20px;
@@ -125,6 +133,7 @@ p {
   color: #333;
   margin-top: 10px;
 }
+
 /* Responsive Design */
 @media screen and (max-width: 768px) {
   .rvm-header {

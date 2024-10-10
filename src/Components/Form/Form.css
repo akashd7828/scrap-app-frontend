@@ -1,65 +1,10 @@
 /* Container for the layout */
 .container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center; /* Center the form */
   align-items: center;
-  padding: 3rem;
+  padding: 2rem; /* Padding for top and bottom */
   min-height: 100vh;
-  gap: 20px;
-  flex-wrap: wrap; /* Ensures wrapping on smaller screens */
-}
-
-/* Left side (text and image) */
-.left-side {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: left;
-  padding: 20px;
-}
-
-/* Heading and highlights */
-.left-side h1 {
-  font-family: Inter;
-  font-size: 50px;
-  font-weight: 800;
-  letter-spacing: -1.4px;
-  line-height: 120%;
-  max-width: 600px;
-}
-
-.left-side .highlight {
-  color: #0072c6;
-  font-weight: bold;
-}
-
-/* Sub-title and download link */
-.left-side .sub-title {
-  color: #5b5b5b;
-  font-family: Inter;
-  font-size: 1.2rem;
-  font-weight: 700;
-  letter-spacing: -1.2px;
-  margin-bottom: 20px;
-}
-
-.p {
-  color: #222;
-  font-size: 1.2rem;
-  font-weight: 700;
-}
-
-.download-link {
-  background-color: initial;
-  color: #3880ff;
-  text-decoration: none;
-}
-
-.left-side .banner-img {
-  width: 100%;
-  max-width: 600px;
-  margin-top: 20px;
 }
 
 /* Right side (form) */
@@ -72,21 +17,24 @@
 
 .form-container {
   width: 100%;
-  max-width: 400px;
-  background-color: #f9f9f9;
-  padding: 30px;
+  max-width: 600px; /* Increased max width for the form */
+  background-color: #ffffff; /* White background for the form */
+  padding: 40px; /* Increased padding for more space */
   border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease; /* Smooth shadow effect */
 }
 
 .form-container h4 {
   margin-bottom: 20px;
-  font-size: 1.5rem;
+  font-size: 2rem; /* Increased font size for better visibility */
+  color: #333; /* Darker text for headings */
 }
 
 .form-container p {
   margin-bottom: 10px;
   font-size: 1rem;
+  color: #666; /* Lighter text for other content */
 }
 
 .input-box {
@@ -98,20 +46,31 @@
 
 .input-box input {
   flex: 1;
-  padding: 10px;
+  padding: 12px; /* Slightly increased padding */
   border: 1px solid #ccc;
   border-radius: 5px;
+  transition: border-color 0.2s; /* Transition effect */
+}
+
+.input-box input:focus {
+  border-color: #0072c6; /* Highlight border on focus */
+  outline: none; /* Remove default outline */
 }
 
 .next-button {
   width: 100%;
-  padding: 10px;
+  padding: 12px; /* Slightly increased padding */
   background-color: #0072c6;
   color: #fff;
   border: none;
   border-radius: 5px;
   font-size: 1rem;
   cursor: pointer;
+  transition: background-color 0.3s; /* Smooth transition */
+}
+
+.next-button:hover {
+  background-color: #005999; /* Darker on hover */
 }
 
 .support-text {
@@ -129,17 +88,6 @@
   .container {
     flex-direction: column;
     padding: 1rem;
-    gap: 40px;
-  }
-
-  .left-side,
-  .right-side {
-    width: 100%;
-  }
-
-  .left-side h1 {
-    font-size: 36px;
-    line-height: 1.3;
   }
 
   .form-container {
@@ -148,9 +96,8 @@
 }
 
 @media (max-width: 480px) {
-  .left-side h1 {
-    font-size: 28px;
-    line-height: 1.2;
+  .form-container h4 {
+    font-size: 1.5rem; /* Adjusted for smaller screens */
   }
 
   .input-box input {
@@ -164,14 +111,4 @@
   .support-text {
     font-size: 0.8rem;
   }
-}
-
-.form-container-large {
-  width: 100%; /* Increase width */
-  max-width: 600px; /* Adjust as needed */
-  padding: 2rem;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-  margin: 0 auto; /* Center align */
 }

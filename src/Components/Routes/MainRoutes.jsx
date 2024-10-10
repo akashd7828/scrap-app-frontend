@@ -10,6 +10,7 @@ import AboutUs from "../ExtraPages/AboutUs";
 import ScrapRates from "../ExtraPages/ScrapRates";
 import PrivateRoute from "./PivateRoutes";
 import RVM from "../ExtraPages/Rvm";
+import Form from "../Form/Form";
 
 const MainRoutes = () => {
   return (
@@ -17,6 +18,8 @@ const MainRoutes = () => {
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Signup />} />
       <Route path="/" element={<Homepage />} />
+      <Route path="/schedule-pickup" element={<Form />} />
+
       <Route
         path="/"
         element={

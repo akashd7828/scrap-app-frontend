@@ -8,12 +8,14 @@ import Blogs from "../Components/Blogs/Blogs";
 import { FooterContainer } from "../Components/Footer/Footer";
 import TestimonialCard from "../Components/Testimonials/Testimonial";
 import PollutionInfo from "./PollutionInfo";
+import Home from "../Components/Form/Home";
 
 const Homepage = () => {
   return (
     <div>
       {/* <Navbar/> */}
-      <Form />
+      {/* <Form /> */}
+      <Home />
       <PollutionInfo />
       <Sharktank />
       <CardComponents />
