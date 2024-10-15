@@ -2,7 +2,7 @@ import axios from "axios";
 import React from "react";
 import { useNavigate } from "react-router-dom";
 export const RefreshAccessToken = async () => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   try {
     const response = await axios.get(
       `${process.env.REACT_APP_API_URL}/api/users/refresh-token`,
@@ -21,7 +21,8 @@ export const RefreshAccessToken = async () => {
   } catch (err) {
     if (err?.status === 403) {
       localStorage.clear();
-      navigate("/login");
+      // navigate("/login");
+      window.location.href = "/login";
     }
   }
   console.error("Failed to refresh access token");

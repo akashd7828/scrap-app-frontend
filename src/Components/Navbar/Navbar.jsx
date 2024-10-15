@@ -65,11 +65,11 @@ const Navbar = () => {
         {/* Navbar Items */}
         <div className={`navbar-items ${isOpen ? "open" : ""}`}>
           <ul className="header_ul" onClick={() => setIsOpen(false)}>
-            <Link to="/rvm">
-              <li className="nav-item">RVM</li>
-            </Link>
             <Link to="/">
               <li className="nav-item">Home</li>
+            </Link>
+            <Link to="/rvm">
+              <li className="nav-item">RVM</li>
             </Link>
             <Link to="/schedule-pickup">
               <li className="nav-item">Schedule Pickup</li>

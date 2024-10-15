@@ -44,6 +44,7 @@ const ScrapCards = () => {
         );
         setOrders(response.data);
       } catch (err) {
+        console.log("@@errr", err.status);
         if (err?.status === 403) {
           await RefreshAccessToken();
         } else {

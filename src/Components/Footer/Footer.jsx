@@ -22,10 +22,13 @@ export function FooterContainer() {
           </Footer.Column>
           <Footer.Column>
             <Footer.Title>Contact Us</Footer.Title>
-            <Footer.Link href="#">United States</Footer.Link>
-            <Footer.Link href="#">United Kingdom</Footer.Link>
-            <Footer.Link href="#">Australia</Footer.Link>
-            <Footer.Link href="#">Support</Footer.Link>
+            <Footer.Link target="_blank" href="mailto:info.scrappe@gmail.com">
+              <div style={{ whiteSpace: "nowrap" }}>
+                {" "}
+                Email: info.scrappe@gmail.com
+              </div>
+            </Footer.Link>
+            <Footer.Link href="#">Phone: 7702115695</Footer.Link>
           </Footer.Column>
           <Footer.Column>
             <Footer.Title>Social</Footer.Title>

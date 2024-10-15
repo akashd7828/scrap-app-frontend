@@ -1,6 +1,7 @@
 import React from "react";
 import "./Home.css";
 import chotu from "../../Assets/chotu.jpeg";
+import rvm from "../../Assets/rvm.jpeg"; // Add the RVM image import
 import { FaRecycle, FaMobileAlt, FaTruck } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 
@@ -10,6 +11,16 @@ const Home = () => {
     <div className="home-container">
       {/* Hero Section */}
       <section className="hero-section">
+        <div className="left-side-content">
+          <h2>Why Choose ScrapPe?</h2>
+          <ul>
+            <li>Fast pickups</li>
+            <li>Best scrap rates</li>
+            <li>Eco-friendly recycling</li>
+            <li>Track transactions with ease</li>
+          </ul>
+        </div>
+
         <div className="overlay"></div>
         <div className="content">
           <h1 className="hero-title">
@@ -24,8 +35,12 @@ const Home = () => {
             onClick={() => navigate("/schedule-pickup")}
             className="cta-button"
           >
-            Get Started
+            Schedule Pickup
           </button>
+        </div>
+
+        <div className="right-side-content">
+          <img src={rvm} alt="RVM machine" className="rvm-image" />
         </div>
       </section>
 
