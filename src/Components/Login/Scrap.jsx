@@ -135,7 +135,10 @@ const Form2 = ({ setFormData, errors, formData }) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({ ...prevData, [name]: value }));
   };
-
+  const today = new Date();
+  const minDate = `${today.getFullYear()}-${String(
+    today.getMonth() + 1
+  ).padStart(2, "0")}-${String(today.getDate()).padStart(2, "0")}`;
   return (
     <>
       <Heading w="100%" textAlign={"center"} fontWeight="normal" mb="2%">
@@ -197,6 +200,7 @@ const Form2 = ({ setFormData, errors, formData }) => {
             name="dateToday"
             id="dateToday"
             value={formData.dateToday}
+            min={minDate}
             onChange={(e) => handleDateChange("dateToday", e.target.value)}
           />
           <FormErrorMessage>{errors.dateToday}</FormErrorMessage>
