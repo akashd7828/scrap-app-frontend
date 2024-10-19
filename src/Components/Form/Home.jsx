@@ -10,15 +10,17 @@ const Home = () => {
   return (
     <div className="home-container">
       {/* Hero Section */}
+
       <section className="hero-section">
-        <div className="left-side-content">
-          <h2>Why Choose ScrapPe?</h2>
+        <div>
+          <img src={chotu} alt="RVM machine" />
+          {/* <h2>Why Choose ScrapPe?</h2>
           <ul>
             <li>Fast pickups</li>
             <li>Best scrap rates</li>
             <li>Eco-friendly recycling</li>
             <li>Track transactions with ease</li>
-          </ul>
+          </ul> */}
         </div>
 
         <div className="overlay"></div>
@@ -39,8 +41,8 @@ const Home = () => {
           </button>
         </div>
 
-        <div className="right-side-content">
-          <img src={rvm} alt="RVM machine" className="rvm-image" />
+        <div>
+          <img src={rvm} alt="RVM machine" />
         </div>
       </section>
 

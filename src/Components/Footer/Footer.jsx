@@ -1,35 +1,59 @@
 import React from "react";
 import Footer from "./FooterRender2";
 import Icon from "../Icons/Icons";
+import { useNavigate } from "react-router-dom";
 
 export function FooterContainer() {
+  const navigate = useNavigate();
+
+  const redirectToWhyUs = () => {
+    navigate("/about-us");
+  };
+
+  const redirectToRvm = () => {
+    navigate("/rvm");
+  };
   return (
     <Footer>
       <Footer.Wrapper>
         <Footer.Row>
           <Footer.Column>
             <Footer.Title>About Us</Footer.Title>
-            <Footer.Link href="#">Story</Footer.Link>
-            <Footer.Link href="#">Clients</Footer.Link>
-            <Footer.Link href="/admin">Admin</Footer.Link>
+            <Footer.Link
+              style={{ cursor: "pointer" }}
+              onClick={redirectToWhyUs}
+            >
+              Story
+            </Footer.Link>
+            <Footer.Link
+              style={{ cursor: "pointer" }}
+              onClick={redirectToWhyUs}
+            >
+              Clients
+            </Footer.Link>
+            <Footer.Link
+              style={{ cursor: "pointer" }}
+              onClick={redirectToWhyUs}
+            >
+              Admin
+            </Footer.Link>
           </Footer.Column>
           <Footer.Column>
             <Footer.Title>Services</Footer.Title>
-            <Footer.Link href="#">Marketing</Footer.Link>
-            <Footer.Link href="#">Consulting</Footer.Link>
-            <Footer.Link href="#">Development</Footer.Link>
-            <Footer.Link href="#">Design</Footer.Link>
-          </Footer.Column>
-          <Footer.Column>
-            <Footer.Title>Contact Us</Footer.Title>
-            <Footer.Link target="_blank" href="mailto:info.scrappe@gmail.com">
-              <div style={{ whiteSpace: "nowrap" }}>
-                {" "}
-                Email: info.scrappe@gmail.com
-              </div>
+            <Footer.Link style={{ cursor: "pointer" }} onClick={redirectToRvm}>
+              Marketing
             </Footer.Link>
-            <Footer.Link href="#">Phone: 7702115695</Footer.Link>
+            <Footer.Link style={{ cursor: "pointer" }} onClick={redirectToRvm}>
+              Consulting
+            </Footer.Link>
+            <Footer.Link style={{ cursor: "pointer" }} onClick={redirectToRvm}>
+              Development
+            </Footer.Link>
+            <Footer.Link style={{ cursor: "pointer" }} onClick={redirectToRvm}>
+              Design
+            </Footer.Link>
           </Footer.Column>
+
           <Footer.Column>
             <Footer.Title>Social</Footer.Title>
             <Footer.Link href="https://www.facebook.com/">
@@ -53,6 +77,24 @@ export function FooterContainer() {
             >
               <Icon className="fab fa-twitter" />
               LinkedIn
+            </Footer.Link>
+          </Footer.Column>
+          <Footer.Column>
+            <Footer.Title>Contact Us</Footer.Title>
+            <Footer.Link
+              style={{ textWrap: "nowrap" }}
+              target="_blank"
+              href="mailto:info.scrappe@gmail.com"
+            >
+              <div> Email: info.scrappe@gmail.com</div>
+            </Footer.Link>
+            <Footer.Link href="#">Phone: 7702115695</Footer.Link>
+            <Footer.Link href="#">
+              <div style={{ textWrap: "nowrap" }}>
+                Address: A-10 Godavari Homes <br /> Suchitra Quthbullapur
+                Hyderabad <br />
+                Telangana-500067 India
+              </div>
             </Footer.Link>
           </Footer.Column>
         </Footer.Row>

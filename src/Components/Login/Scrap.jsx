@@ -28,7 +28,7 @@ import { Link, useNavigate } from "react-router-dom";
 
 // Options for Scrap Weight
 const scrapWeightOptions = [
-  { value: "1-10 kg", label: "1-10 kg" },
+  { value: "1-10 kg", label: "5 kg" },
   { value: "10-20 kg", label: "10-20 kg" },
   { value: "20-40 kg", label: "20-40 kg" },
   { value: "40+ kg", label: "40+ kg" },
@@ -225,7 +225,7 @@ const Form2 = ({ setFormData, errors, formData }) => {
       </FormControl>
 
       <FormControl isInvalid={errors.streetAddress}>
-        <FormLabel htmlFor="streetAddress">Street Address</FormLabel>
+        <FormLabel htmlFor="streetAddress"> Address</FormLabel>
         <Input
           type="text"
           name="streetAddress"
@@ -256,7 +256,7 @@ export default function Multistep() {
     if (!form2Data.city) newErrors.city = "City is required.";
     if (!form2Data.state) newErrors.state = "State is required.";
     if (!form2Data.streetAddress)
-      newErrors.streetAddress = "Street Address is required.";
+      newErrors.streetAddress = "Address is required.";
     if (!form2Data.dateToday || isNaN(new Date(form2Data.dateToday))) {
       newErrors.dateToday = "Please enter a valid date.";
     }
