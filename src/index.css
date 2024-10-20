@@ -24,3 +24,7 @@ code {
 .tooltip_wrapper__vA_JM {
   display: none !important;
 }
+
+html .tooltip_wrapper__vA_JM {
+  display: none !important;
+}
