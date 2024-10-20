@@ -1,5 +1,7 @@
 {
-  "projectSettings": {
-    "deploymentIndicator": false
+  "build": {
+    "env": {
+      "VERCEL_DEPLOYMENT_INDICATOR": "false"
+    }
   }
 }
