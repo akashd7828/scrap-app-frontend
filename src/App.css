@@ -1,7 +1,13 @@
+.toolbar_toolbarContainer__BtQnv,
+.geist-dark,
+.bubbles_bubbleContainerInner__fHHMT,
+.bubbles_shown__O_4hy {
+  display: none !important;
+}
+
 .App {
   text-align: center;
 }
-
 
 .App-logo {
   height: 40vmin;

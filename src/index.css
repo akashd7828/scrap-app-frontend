@@ -17,7 +17,9 @@ code {
   display: none !important;
 }
 
-.toolbar_toolbarContainer__BtQnv .geist-dark,
-.bubbles_bubbleContainerInner__fHHMT .bubbles_shown__O_4hy {
-  display: none;
+.toolbar_toolbarContainer__BtQnv,
+.geist-dark,
+.bubbles_bubbleContainerInner__fHHMT,
+.bubbles_shown__O_4hy {
+  display: none !important;
 }
