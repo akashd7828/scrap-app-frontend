@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import "./Scrap.css";
 import {
   Progress,
   Box,
@@ -9,22 +10,14 @@ import {
   Heading,
   Flex,
   FormControl,
-  GridItem,
   FormLabel,
   Input,
-  SimpleGrid,
-  Stack,
-  InputLeftAddon,
-  InputGroup,
   Textarea,
-  FormHelperText,
-  InputRightElement,
   FormErrorMessage,
 } from "@chakra-ui/react";
 import Select from "react-select";
-import { saveForm1Data, saveForm2Data } from "./api";
 import { useToast } from "@chakra-ui/react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 // Options for Scrap Weight
 const scrapWeightOptions = [
@@ -48,7 +41,6 @@ const Form1 = ({ setFormData }) => {
   const [scrapWeight, setScrapWeight] = useState(null);
   const [scrapType, setScrapType] = useState([]);
   const [scrapItems, setScrapItems] = useState([]);
-
   // Handle Scrap Weight Change
   const handleScrapWeightChange = (selectedOption) => {
     setScrapWeight(selectedOption);
@@ -91,8 +83,14 @@ const Form1 = ({ setFormData }) => {
       <Heading w="100%" textAlign={"center"} fontWeight="normal" mb="2%">
         Scrap Details
       </Heading>
-      <Flex direction="row" gap="2rem" align="center" p={4}>
-        <FormControl width="full" maxWidth="md">
+      <Flex
+        direction="row"
+        gap="2rem"
+        align="center"
+        className="flex-cont"
+        p={4}
+      >
+        <FormControl width="full" maxWidth="md" className="weight-select">
           <FormLabel htmlFor="scrap-weight" fontWeight={"normal"}>
             Scrap Weight
           </FormLabel>
@@ -144,7 +142,7 @@ const Form2 = ({ setFormData, errors, formData }) => {
       <Heading w="100%" textAlign={"center"} fontWeight="normal" mb="2%">
         User Address
       </Heading>
-      <Flex gap={"2rem"}>
+      <Flex gap={"2rem"} className="date-input">
         <FormControl isInvalid={errors.mobileNumber}>
           <FormLabel htmlFor="mobileNumber">Phone Number</FormLabel>
           <Input
@@ -168,7 +166,7 @@ const Form2 = ({ setFormData, errors, formData }) => {
           <FormErrorMessage>{errors.pinCode}</FormErrorMessage>
         </FormControl>
       </Flex>
-      <Flex gap={"2rem"}>
+      <Flex gap={"2rem"} className="date-input">
         <FormControl isInvalid={errors.city}>
           <FormLabel htmlFor="city">City</FormLabel>
           <Input
@@ -192,7 +190,7 @@ const Form2 = ({ setFormData, errors, formData }) => {
           <FormErrorMessage>{errors.state}</FormErrorMessage>
         </FormControl>
       </Flex>
-      <Flex gap={"2rem"}>
+      <Flex gap={"2rem"} className="date-input">
         <FormControl isInvalid={errors.dateToday}>
           <FormLabel htmlFor="dateToday">Date</FormLabel>
           <Input
@@ -217,7 +215,7 @@ const Form2 = ({ setFormData, errors, formData }) => {
           <FormErrorMessage>{errors.landmark}</FormErrorMessage>
         </FormControl>
       </Flex>
-      <FormControl isInvalid={errors.description}>
+      <FormControl isInvalid={errors.description} className="date-input">
         <FormLabel htmlFor="description">Description</FormLabel>
         <Textarea
           name="description"
@@ -351,6 +349,7 @@ export default function Multistep() {
         p={6}
         m="10px auto"
         as="form"
+        className={step === 1 ? "form1-height" : ""}
       >
         <Progress hasStripe value={progress} mb="5%" mx="5%" isAnimated />
         {step === 1 ? (
@@ -363,22 +362,24 @@ export default function Multistep() {
             formData={form2Data}
           />
         )}
-        <ButtonGroup mt="5%" w="100%">
+        <ButtonGroup mt="15%" w="100%" ml="1rem">
           <Flex w="100%" justifyContent="space-between">
             <Flex>
-              <Button
-                onClick={() => {
-                  setStep(step - 1);
-                  setProgress(progress - 33.33);
-                }}
-                isDisabled={step === 1}
-                colorScheme="teal"
-                variant="solid"
-                w="7rem"
-                mr="5%"
-              >
-                Back
-              </Button>
+              {step != 1 && (
+                <Button
+                  onClick={() => {
+                    setStep(step - 1);
+                    setProgress(progress - 33.33);
+                  }}
+                  isDisabled={step === 1}
+                  colorScheme="teal"
+                  variant="solid"
+                  w="7rem"
+                  mr="5%"
+                >
+                  Back
+                </Button>
+              )}
               {step == 1 && (
                 <Button
                   w="7rem"

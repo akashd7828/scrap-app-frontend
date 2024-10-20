@@ -111,8 +111,6 @@ body {
 
 /* Mobile view */
 @media (max-width: 768px) {
-  /* Mobile view */
-
   .navbar-items {
     display: none;
     position: absolute;
@@ -120,7 +118,6 @@ body {
     top: 60px;
     right: 0;
     background-color: #f8f9fa;
-    /* height: 100vh; */
     width: 100%;
     flex-direction: column;
     justify-content: right;
@@ -155,14 +152,61 @@ body {
     display: flex;
     justify-content: end;
     position: relative;
-    left: 11rem;
+    left: 10rem;
   }
 
   .local_header_logo {
     width: 100%;
     position: relative;
     right: 1rem;
-
     height: 40px;
+  }
+}
+
+/* Tablet view (768px to 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .navbar-items {
+    margin-left: 1rem;
+  }
+
+  .header_ul a,
+  .header_ul li {
+    margin-right: 20px;
+    font-size: 14px;
+  }
+
+  .navbar-btn {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+
+  .navbar-end-mobile {
+    display: none; /* Hide mobile buttons */
+  }
+}
+
+/* Large desktop view (1025px and above) */
+@media (min-width: 1025px) {
+  .navbar {
+    padding: 1rem 4rem; /* Increase padding for larger screens */
+  }
+
+  .navbar-items {
+    margin-left: 3rem; /* Add more space for desktop view */
+  }
+
+  .header_ul a,
+  .header_ul li {
+    margin-right: 40px;
+    font-size: 18px; /* Slightly larger font for larger screens */
+  }
+
+  .navbar-btn {
+    font-size: 16px; /* Larger font size for buttons */
+    padding: 10px 20px; /* Increase padding */
+  }
+
+  .local_header_logo {
+    height: 80px; /* Maintain logo size for larger screens */
   }
 }

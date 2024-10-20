@@ -1,0 +1,15 @@
+.form1-height {
+  height: 400px;
+}
+
+.date-input {
+  margin-bottom: 0.7rem;
+}
+@media (max-width: 600px) {
+  .flex-cont {
+    display: block !important;
+  }
+  .weight-select {
+    margin-bottom: 1rem !important;
+  }
+}
