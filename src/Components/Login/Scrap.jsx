@@ -28,7 +28,7 @@ import { Link, useNavigate } from "react-router-dom";
 
 // Options for Scrap Weight
 const scrapWeightOptions = [
-  { value: "1-10 kg", label: "5 kg" },
+  { value: "5 kg", label: "5 kg" },
   { value: "10-20 kg", label: "10-20 kg" },
   { value: "20-40 kg", label: "20-40 kg" },
   { value: "40+ kg", label: "40+ kg" },
