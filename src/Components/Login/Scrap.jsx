@@ -251,7 +251,7 @@ export default function Multistep() {
   const [form1Data, setForm1Data] = useState({});
   const [form2Data, setForm2Data] = useState({});
   const [errors, setErrors] = useState({});
-  console.log("@@form2Data", form1Data);
+
   const validate = () => {
     const newErrors = {};
     if (!form2Data.mobileNumber)
@@ -263,6 +263,15 @@ export default function Multistep() {
       newErrors.streetAddress = "Address is required.";
     if (!form2Data.dateToday || isNaN(new Date(form2Data.dateToday))) {
       newErrors.dateToday = "Please enter a valid date.";
+    } else {
+      const enteredDate = new Date(form2Data.dateToday);
+      const today = new Date();
+      today.setHours(0, 0, 0, 0); // Set today's time to midnight for comparison
+
+      // Check if the entered date is in the past
+      if (enteredDate < today) {
+        newErrors.dateToday = "Date cannot be in the past.";
+      }
     }
     if (!form2Data.landmark) newErrors.landmark = "Landmark is required.";
     if (!form2Data.description)
@@ -272,7 +281,6 @@ export default function Multistep() {
   };
   const user = JSON.parse(localStorage.getItem("user"));
   const handleSubmit = async () => {
-    console.log("@@form1data", form1Data);
     if (validate()) {
       const orderData = {
         userId: user._id,
@@ -291,8 +299,6 @@ export default function Multistep() {
           pincode: form2Data.pinCode,
         },
       };
-
-      console.log("@@order data", orderData);
 
       try {
         const response = await fetch(
