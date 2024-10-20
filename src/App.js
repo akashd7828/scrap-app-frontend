@@ -25,7 +25,9 @@ import { useEffect } from "react";
 
 function App() {
   useEffect(() => {
-    const element = document.getElementsByClassName(".tooltip_wrapper__vA_JM");
+    const element = document.getElementsByClassName(
+      ".tooltip_wrapper__vA_JM"
+    )?.[0];
     console.log("@@ele", element);
     if (element) {
       element.style.display = "none";
