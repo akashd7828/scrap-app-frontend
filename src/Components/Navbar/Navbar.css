@@ -82,6 +82,10 @@ body {
   color: white;
 }
 
+.header_ul li {
+  font-size: 1rem !important;
+}
+
 /* Burger menu icon */
 .burger {
   display: none;

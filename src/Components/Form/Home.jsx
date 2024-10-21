@@ -23,7 +23,7 @@ const Home = () => {
           </ul> */}
         </div>
 
-        <div className="overlay"></div>
+        {/* <div className="overlay"></div> */}
         <div className="content">
           <h1 className="hero-title">
             Transform Your Scrap into Value{" "}
