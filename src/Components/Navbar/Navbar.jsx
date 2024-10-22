@@ -94,14 +94,30 @@ const Navbar = () => {
           </ul>
 
           {/* Move Buttons Inside Navbar Items for Mobile */}
-          {isOpen && !user && (
+          {isOpen && (
             <div className="navbar-end-mobile" onClick={() => setIsOpen(false)}>
-              <button className="navbar-btn schedule-btn">
-                <Link to="/register">Register</Link>
-              </button>
-              <button className="navbar-btn login-btn">
-                <Link to="/login">Login</Link>
-              </button>
+              {" "}
+              {!user ? (
+                <>
+                  {" "}
+                  <button className="navbar-btn schedule-btn">
+                    <Link to="/register">Register</Link>
+                  </button>
+                  <button className="navbar-btn login-btn">
+                    <Link to="/login">Login</Link>
+                  </button>
+                </>
+              ) : (
+                <>
+                  <span className="navbar-user">Hello, {datamow.username}</span>
+                  <button
+                    className="navbar-btn login-btn"
+                    onClick={handleLogout}
+                  >
+                    Logout
+                  </button>
+                </>
+              )}
             </div>
           )}
         </div>
@@ -120,7 +136,7 @@ const Navbar = () => {
           ) : (
             <>
               <span className="navbar-user">Hello, {datamow.username}</span>
-              <button className="navbar-btn logout-btn" onClick={handleLogout}>
+              <button className="navbar-btn login-btn" onClick={handleLogout}>
                 Logout
               </button>
             </>
